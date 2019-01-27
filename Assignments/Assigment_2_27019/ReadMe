@@ -1,5 +1,54 @@
 #Get all female employees
 SELECT * FROM employees
-WHERE gender='F';
+WHERE gender='F' limit 10;
+
+
+#Get all employees hired after 01-01-1995
+SELECT * FROM employees
+WHERE employees.hire_date > '1995-01-01' limit 10;
+
+savepoint A;
+
+
+#Get all the valid titles (with to_date equals to 01-01-9999)
+SELECT * FROM titles
+WHERE titles.to_date = '9999-01-01' limit 10;
+
+
+#Get all salaries from 60000 to 90000, which are integers
+SELECT * FROM salaries
+WHERE salaries.salary >=60000 AND salaries.salary <=90000 limit 10;
+
+
+#Get all titles where title is equal to engineer
+SELECT * FROM titles
+WHERE titles.title = 'engineer' limit 10;
+
+savepoint B;
+
+#Insert a new row into course table with 1, ‘CED-1250’, ‘Big Data Storage’ 
+INSERT INTO course (course_id, course_name, course_description)
+VALUES ('1','CED-1250', 'Big Data Storage');
+
+#show result
+SELECT * FROM course
+WHERE course.course_name = 'CED-1250';
+
+
+savepoint C;
+
+#Delete all male employees hired at 01-01-2009
+
+savepoint D;
+
+#Update the salary of employee 499984 to 100000
+
+
+savepoint E;
+
+#Delete all titles not valid (with to_date not equal to 01-01-9999)
+
+
+savepoint F;
 
 
