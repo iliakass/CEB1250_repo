@@ -1,0 +1,18 @@
+# "--" comments not possible
+
+# Create the tables course, with the fields course_id, course_name and course_description with the following datatypes integer, varchar2 of 50 and varchar2 of 100
+
+CREATE TABLE course(
+ course_id INTEGER PRIMARY KEY,
+ course_name VARCHAR(50) not null,
+ course_descrition VARCHAR(100) not null
+  
+)
+
+# Add the field, course_day of type varchar2 of 50
+# Execute this separetly
+alter table course add course_day VARCHAR(50)
+;
+
+# View result
+SELECT * FROM course ;
