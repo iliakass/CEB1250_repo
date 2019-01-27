@@ -1,1 +1,5 @@
+#Get all female employees
+SELECT * FROM employees
+WHERE gender='F';
+
 
