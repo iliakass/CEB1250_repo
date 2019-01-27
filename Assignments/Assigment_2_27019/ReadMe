@@ -37,7 +37,10 @@ WHERE course.course_name = 'CED-1250';
 
 savepoint C;
 
+
 #Delete all male employees hired at 01-01-2009
+
+
 
 savepoint D;
 
@@ -50,5 +53,3 @@ savepoint E;
 
 
 savepoint F;
-
-
