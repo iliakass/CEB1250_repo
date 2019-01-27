@@ -37,19 +37,35 @@ WHERE course.course_name = 'CED-1250';
 
 savepoint C;
 
-
 #Delete all male employees hired at 01-01-2009
+DELETE FROM employees
+WHERE employees.hire_date = '2009-01-01' AND employees.gender='M';
 
-
+#show result
+SELECT FROM employees
+WHERE employees.hire_date = '2009-01-01' AND employees.gender='M';
 
 savepoint D;
 
-#Update the salary of employee 499984 to 100000
 
+#Update the salary of employee 499984 to 100000
+UPDATE salary
+WHERE salaries.emp_no >= 499984 AND salaries.emp_no <=100000
+SET salaries.salary = 137000;
+
+#show result
+SELECT * FROM salaries
+WHERE salaries.emp_no >= 499984 AND salaries.emp_no <=100000 limit 30;
 
 savepoint E;
 
-#Delete all titles not valid (with to_date not equal to 01-01-9999)
 
+#Delete all titles not valid (with to_date not equal to 01-01-9999)
+DELETE FROM titles
+WHERE titles.to_date <> '9999-01-01';
+
+#show result
+SELECT * FROM titles
+WHERE titles.to_date <> '9999-01-01' limit 30;
 
 savepoint F;
