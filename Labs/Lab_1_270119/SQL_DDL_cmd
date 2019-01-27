@@ -5,7 +5,7 @@
 CREATE TABLE course(
  course_id INTEGER PRIMARY KEY,
  course_name VARCHAR(50) not null,
- course_descrition VARCHAR(100) not null
+ course_description VARCHAR(100) not null
   
 )
 
