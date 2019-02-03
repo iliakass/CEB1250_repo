@@ -1,0 +1,9 @@
+
+# Add the field, course_day of type varchar2 of 50
+# Execute this separetly
+# By not indicating 'not null', the constraint is absent and it can be null
+alter table course add course_day VARCHAR(50)
+;
+
+# View result
+SELECT * FROM course ;
