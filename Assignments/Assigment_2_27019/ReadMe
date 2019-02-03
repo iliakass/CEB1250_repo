@@ -42,20 +42,19 @@ DELETE FROM employees
 WHERE employees.hire_date = '2009-01-01' AND employees.gender='M';
 
 #show result
-SELECT FROM employees
+SELECT * FROM employees
 WHERE employees.hire_date = '2009-01-01' AND employees.gender='M';
 
 savepoint D;
 
-
 #Update the salary of employee 499984 to 100000
-UPDATE salary
-WHERE salaries.emp_no >= 499984 AND salaries.emp_no <=100000
-SET salaries.salary = 137000;
+UPDATE salaries
+SET salaries.salary = 100000
+WHERE salaries.emp_no = '499984';
 
 #show result
 SELECT * FROM salaries
-WHERE salaries.emp_no >= 499984 AND salaries.emp_no <=100000 limit 30;
+WHERE salaries.emp_no = 499984 limit 30;
 
 savepoint E;
 
