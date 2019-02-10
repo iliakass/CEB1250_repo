@@ -1,3 +1,8 @@
+Team members: Fritz Gyger, Ilia Kassianenko, Pawel Kaluski
+
+
+Context:
+
 The purpose of this project is to identify the quantity of snow moved for the City of Montreal to a designated disposal area depot, for the 2016 to 2019 snowfalls seasons. Each depot has a specified capacity, except for a sewage depot, where the runoff sewage systems capacity is not specified. Also, the quantity of daily transactions per depot is considered to be the quantity of visits to unload snow at a specific depot. The daily frequency for a depot is obtained by dividing the quantity of visits for a depot by the total quantity of visits to all depots on a specific day.
 
 Additionally, the amount of precipitation is recorded at the Montreal YUL international airport as an average depth in centimeters. Also, it is assumed for this project that the quantity of precipitation recorded at the Montreal YUL international airport is treater as the uniform distribution of precipitation across the area, which is being consider for this analysis. Therefore, all locations serviced by vehicles with a contract ID are assumed to have received the same amount of precipitation as the aforementioned airport.
@@ -7,3 +12,21 @@ Each daily snow volume unloaded at each depot is divided by the recorded daily a
 Also, by dividing the quantity of visits by the surface area where snow was removed, a service ratio is obtained for a specific depot and day. The difference in time for a transaction between the snow loading and unloading time is considered to be the cycle time. The project herein does not consider the effect on the cycle time following re-assignment of vehicles to depots.
 
 Finally, this analysis will produce for each depot the daily frequency of use and the daily service ratio. Consequently, the analysis will show if constrained capacity depots are used more frequently daily than a sewer depot, and the analysis will show at which depot there is an high quantity of vehicles unloading snow.
+
+
+Data sources:
+
+(volume unloaded) http://donnees.ville.montreal.qc.ca/dataset/contrats-transaction-deneigement
+(depot capacity) http://donnees.ville.montreal.qc.ca/dataset/depot-neige
+(optional) http://donnees.ville.montreal.qc.ca/dataset/secteur-deneigement
+
+domain: http://climate.weather.gc.ca/historical_data/search_historic_data_e.html
+(sub-domain) http://climate.weather.gc.ca/climate_data/daily_data_e.html?hlyRange=2008-01-08%7C2018-04-08&dlyRange=2002-12-23%7C2018-04-08&mlyRange=%7C&StationID=30165&Prov=QC&urlExtension=_e.html&searchType=stnName&optLimit=yearRange&StartYear=2010&EndYear=2018&selRowPerPage=25&Line=3&searchMethod=contains&txtStationName=montreal&timeframe=2&Day=8&Year=2016&Month=1#
+
+
+
+References:
+
+In reference to materials submitted as part of the course requirements for
+CEBD 1160 Introduction to Big Data Technology taught by Dr. Nesrine Zemirli.
+
