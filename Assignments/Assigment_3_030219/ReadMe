@@ -136,3 +136,24 @@ limit 10;
 savepoint C1;
 
 
+
+# What is wrong with the following query, re-write it making the needed corrections.
+
+# Original syntax
+# SELECT employee.emp_no, AVG(salaries.salary)
+# FROM employee INNER JOIN salaries AT employee.emp_no = salaries.emp_no
+# HAVING AVG(salaries.salary) > 10000
+# GROUP BY employee.emp_no
+
+# Modified syntaxt
+# table employees is used rather than employee
+SELECT employees.emp_no, AVG(salaries.salary)
+FROM employees
+INNER JOIN salaries
+  ON employees.emp_no = salaries.emp_no
+
+# "HAVING: is used to check conditions after the aggregation takes place." [2]
+GROUP BY employees.emp_no DESC
+HAVING AVG(salaries.salary) > 10000
+limit 10;
+
