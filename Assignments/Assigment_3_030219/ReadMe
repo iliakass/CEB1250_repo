@@ -2,7 +2,7 @@
 # [1] Ref.: https://www.geeksforgeeks.org/sql-query-to-find-second-largest-salary/
 
 SELECT * FROM salaries
-# ORDER BY salaries.emp_no DESC limit n-1,1;
+# ORDER BY salaries.emp_no DESC limit n-1,1; [1]
 ORDER BY salaries.emp_no DESC limit 2,1;
 
 #show result
@@ -28,18 +28,20 @@ savepoint B1;
 # For DDL language use case with a SELECT statement, when agregation is not used, the 'WHERE' CLAUSE is used. Within an aggregation statement, the 'HAVING' CLAUSE is used.
 
 # [2] Ref.: https://stackoverflow.com/questions/287474/whats-the-difference-between-having-and-where
-# "HAVING: is used to check conditions after the aggregation takes place. WHERE: is used to check conditions before the aggregation takes place." 
+
+# "HAVING: is used to check conditions after the aggregation takes place. WHERE: is used to check conditions before the aggregation takes place." [2]
 
 
 
 # List, and explain the elements of an Entities and Relationships model
 
 # [3] Ref.: https://www.tutorialspoint.com/dbms/er_model_basic_concepts.htm
-# "Mapping Cardinalities defines the number of entities in one entity set, which can be associated with the number of entities of other set via relationship set." (e.g. 1:1, M:M, 1:M, M:1)
-# "The association among entities is called a relationship."
-# "Key is an attribute or collection of attributes that uniquely identifies an entity among entity set."
-# "Entities are represented by means of their properties, called attributes."
-# "An entity set is a collection of similar types of entities."
+
+# "Mapping Cardinalities defines the number of entities in one entity set, which can be associated with the number of entities of other set via relationship set." [3] (e.g. 1:1, M:M, 1:M, M:1)
+# "The association among entities is called a relationship." [3]
+# "Key is an attribute or collection of attributes that uniquely identifies an entity among entity set." [3]
+# "Entities are represented by means of their properties, called attributes." [3]
+# "An entity set is a collection of similar types of entities." [3]
 
 
 # What are the different categories of SQL statements, what does each group do
@@ -47,28 +49,62 @@ savepoint B1;
 # [4] Ref.: https://www.ibm.com/support/knowledgecenter/en/SSGU8G_12.1.0/com.ibm.sqls.doc/ids_sqs_0212.htm
 
 # Data definition statements
-# "These [DDL] statements can declare, rename, modify, or destroy objects in the local database." (e.g. CREATE, ALTER, DROP, TRUNCATE)
+# "These [DDL] statements can declare, rename, modify, or destroy objects in the local database."[4] (e.g. CREATE, ALTER, DROP, TRUNCATE)
 
 # Data manipulation statements
-# "These [DML] statements can retrieve, insert, delete, or modify data values." (e.g. SELECT, INSERT, UPDATE, DELETE)
+# "These [DML] statements can retrieve, insert, delete, or modify data values."[4] (e.g. SELECT, INSERT, UPDATE, DELETE)
 
 
 # [5] Ref.: https://www.geeksforgeeks.org/sql-ddl-dml-dcl-tcl-commands/
 
 # Data Control Language 
-# "DCL includes commands such as GRANT and REVOKE which mainly deals with the rights, permissions and other controls of the database system." (e.g. GRANT, REVOKE)
+# "DCL includes commands such as GRANT and REVOKE which mainly deals with the rights, permissions and other controls of the database system."[5] (e.g. GRANT, REVOKE)
 
 # Transaction Control Language
-# "TCL commands deals with the transaction within the database." (e.g. COMMIT, ROLLBACK, SAVEPOINT)
+# "TCL commands deals with the transaction within the database."[5] (e.g. COMMIT, ROLLBACK, SAVEPOINT)
 
 
 
 # List, and explain, the different types of joins
 
+# [6] Ref: https://www.sql-join.com/sql-join-types/
+
+# INNTER JOIN
+# "Select all records from Table A and Table B, where the join condition is met." [6]
+
+# LEFT JOIN
+# "Select all records from Table A, along with records from Table B for which the join condition is met (if at all)." [6]
+
+# RIGHT JOIN
+# "Select all records from Table B, along with records from Table A for which the join condition is met (if at all)." [6]
+
+# FULL OUTER JOIN
+# "Select all records from Table A and Table B, regardless of whether the join condition is met or not." [6]
+
+
+# [7] Ref.: https://www.w3resource.com/sql/joins/perform-a-self-join.php
+
+# SELF JOIN
+# "[It] is a join in which a table is joined with itself [also known as Unary relationships], especially when the table has a FOREIGN KEY which references its own PRIMARY KEY. To join a table itself means that each row of the table is combined with itself and with every other row of the table." [7]
+
 
 # What is the difference between NULL value, Zero, and Blank space
 
+# [8] Ref.: https://stackoverflow.com/questions/46066249/what-are-the-differences-between-null-zero-and-blank-in-sql
+
+# "[All] three are "are represented differently to each other" [...] and that the actual representation is implementation and context dependent."[8]
+
+# NULL
+# "NULL means the absence of any value. You can't do anything with it except test for it." [8] Using a Boolean statement, a True or False case can indicate whether NULL is present in a table.
+
+# ZERO
+# "Zero is a number value. It is a definite with precise mathematical properties." [8] It can be treated as an integer, which can be used in arithmetic. [8]
+
+# Blank space
+# It is context dependent. [8] # "[A blank space is] a zero length string value: i.e. one with no characters in it ('')." [8]
+# "[Also, it] could mean a non-zero length string value consisting of only non-printing characters (SPACE, TAB, etc). Or maybe consisting of just a single SPACE character." [8]
+
+
 
 # Write a SQL that returns the employee name and title for all employees with even number as actual salary (to_date is 9999-01-01);
-
 
