@@ -108,3 +108,29 @@ savepoint B1;
 
 # Write a SQL that returns the employee name and title for all employees with even number as actual salary (to_date is 9999-01-01);
 
+SELECT employees.first_name, titles.title
+FROM employees, titles, salaries
+
+WHERE titles.to_date = '9999-01-01'
+# even number
+# [9] Ref.: https://stackoverflow.com/questions/18805062/how-to-select-odd-or-even-items-from-a-row-in-sql
+AND (salaries.salary% 2) = 0
+
+limit 5;
+
+
+#show result
+
+SELECT employees.first_name, titles.title, salaries.salary, titles.to_date
+FROM employees, titles, salaries
+
+WHERE titles.to_date = '9999-01-01'
+# even number
+# [9] Ref.: https://stackoverflow.com/questions/18805062/how-to-select-odd-or-even-items-from-a-row-in-sql
+AND (salaries.salary% 2) = 0
+
+limit 10;
+
+savepoint C1;
+
+
