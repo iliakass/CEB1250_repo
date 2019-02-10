@@ -125,9 +125,11 @@ SELECT employees.first_name, titles.title, salaries.salary, titles.to_date
 FROM employees, titles, salaries
 
 WHERE titles.to_date = '9999-01-01'
+
 # even number
 # [9] Ref.: https://stackoverflow.com/questions/18805062/how-to-select-odd-or-even-items-from-a-row-in-sql
-AND (salaries.salary% 2) = 0
+
+  AND (salaries.salary% 2) = 0
 
 limit 10;
 
