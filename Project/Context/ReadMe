@@ -14,6 +14,7 @@ Also, by dividing the quantity of visits by the surface area where snow was remo
 Finally, this analysis will produce for each depot the daily frequency of use and the daily service ratio. Consequently, the analysis will show if constrained capacity depots are used more frequently daily than a sewer depot, and the analysis will show at which depot there is an high quantity of vehicles unloading snow.
 
 
+
 Data sources:
 
 (volume unloaded) http://donnees.ville.montreal.qc.ca/dataset/contrats-transaction-deneigement
