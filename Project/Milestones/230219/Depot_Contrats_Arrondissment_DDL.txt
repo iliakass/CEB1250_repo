@@ -1,0 +1,56 @@
+https://stackoverflow.com/questions/15965166/what-is-the-maximum-length-of-latitude-and-longitude
+
+http://www.sqlcourse.com/create.html
+
+DEPOTS:
+
+create table Depot (
+IdentifianDepot integer prmary key,
+NomDepot varchar(30),
+TypeDepot varchar(15),
+Capacite integer,
+Latitude number(2,6),
+Logitude number(3,6),
+VolumeDeverse number(6,2),
+IdentifianArrondissement integer
+)
+
+---------------------------------------------------------
+CONTRATS:
+
+
+create table Contrats (
+IdentifiantContrat integer primary key,
+NumeroContrat varchar(7),
+TypeContrat varchar(12),
+AnneContrat varchar(9),
+Contract_Start_Year integer(4) Left(AnneeContrat, Charindex('-',AnneContrat) - 1),
+Contract_End_Year intger(4), Right(AnneeContrat, Charindex('-', AnneContrat) - 1),
+NoResolution varchar(11),
+IdentifiantArrondissement integer,
+DescriptionType varchar(100),
+Entreprise Varchar(50)
+)
+
+
+For start and end year I found this script wher the question was to split the name where you had 
+firstname(space)Middlename(space)Lastname
+
+SELECT CASE
+         WHEN name LIKE '% %' THEN LEFT(name, Charindex(' ', name) - 1)
+         ELSE name
+       END,
+       CASE
+         WHEN name LIKE '% %' THEN RIGHT(name, Charindex(' ', Reverse(name)) - 1)
+       END
+FROM   YourTable 
+
+--------------------------------------------------------------
+
+ARRONDISSMENT:
+
+create table Arrondissment (
+IdentifiantArrondissement integer primery key,
+ArrondissementCode varchar(3),
+Arrondissement varchar(30)
+)
