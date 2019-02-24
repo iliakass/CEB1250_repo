@@ -1,39 +1,39 @@
-https://stackoverflow.com/questions/15965166/what-is-the-maximum-length-of-latitude-and-longitude
+Ref:
+[1] https://stackoverflow.com/questions/15965166/what-is-the-maximum-length-of-latitude-and-longitude
+[2] http://www.sqlcourse.com/create.html
 
-http://www.sqlcourse.com/create.html
-
-DEPOTS:
+---------------------------------------------------------
+#DEPOTS:
 
 create table Depot (
-IdentifianDepot integer prmary key,
-NomDepot varchar(30),
-TypeDepot varchar(15),
-Capacite integer,
-Latitude number(2,6),
-Logitude number(3,6),
-VolumeDeverse number(6,2),
-IdentifianArrondissement integer
+	IdentifianDepot integer primary key,
+	NomDepot varchar(30),
+	TypeDepot varchar(15),
+	Capacite integer,
+	Latitude number(2,6),
+	Logitude number(3,6),
+	VolumeDeverse number(6,2),
+	IdentifianArrondissement integer
 )
 
 ---------------------------------------------------------
-CONTRATS:
+#CONTRATS:
 
 
 create table Contrats (
-IdentifiantContrat integer primary key,
-NumeroContrat varchar(7),
-TypeContrat varchar(12),
-AnneContrat varchar(9),
-Contract_Start_Year integer(4) Left(AnneeContrat, Charindex('-',AnneContrat) - 1),
-Contract_End_Year intger(4), Right(AnneeContrat, Charindex('-', AnneContrat) - 1),
-NoResolution varchar(11),
-IdentifiantArrondissement integer,
-DescriptionType varchar(100),
-Entreprise Varchar(50)
+	IdentifiantContrat integer primary key,
+	NumeroContrat varchar(7),
+	TypeContrat varchar(12),
+	AnneContrat varchar(9),
+	Contract_Start_Year integer(4) Left(AnneeContrat, Charindex('-',AnneContrat) - 1),
+	Contract_End_Year intger(4), Right(AnneeContrat, Charindex('-', AnneContrat) - 1),
+	NoResolution varchar(11),
+	IdentifiantArrondissement integer,
+	DescriptionType varchar(100),
+	Entreprise varchar(50)
 )
 
-
-For start and end year I found this script wher the question was to split the name where you had 
+# For start and end year I found this script, where the question was to split the name where you had 
 firstname(space)Middlename(space)Lastname
 
 SELECT CASE
@@ -47,10 +47,10 @@ FROM   YourTable
 
 --------------------------------------------------------------
 
-ARRONDISSMENT:
+#ARRONDISSMENT:
 
 create table Arrondissment (
-IdentifiantArrondissement integer primery key,
-ArrondissementCode varchar(3),
-Arrondissement varchar(30)
+	IdentifiantArrondissement integer primary key,
+	ArrondissementCode varchar(3),
+	Arrondissement varchar(30)
 )

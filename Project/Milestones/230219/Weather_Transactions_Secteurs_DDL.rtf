@@ -1,0 +1,60 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf100
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-BoldOblique;\f2\fswiss\fcharset0 Helvetica-Bold;
+}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 https://stackoverflow.com/questions/15965166/what-is-the-maximum-length-of-latitude-and-longitude\
+\
+http://www.sqlcourse.com/create.html\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 ---------------------------------------------------------\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 # WEATHER:\
+\
+create table Weather (\
+	Date primary key,\
+
+\f1\i\b \ul 	Data Quality,\
+	Data/Time,\
+	Data Quality2,
+\f0\i0\b0 \ulnone \
+	Max Temp float,\
+	Min Temp float,\
+	Total Precip float,\
+	Snow on Grnd integer\
+)\
+\
+---------------------------------------------------------\
+# SECTEUR:\
+\
+\
+create table SECTEUR (\
+	IdentifiantSecteur integer primary key,\
+	NomSecteur varchar(7),\
+	IdentifianArrondissement integer foreign key\
+)\
+\
+--------------------------------------------------------------\
+\
+TRANSACTIONS:\
+\
+create table Transactions (\
+	TransactionID integer primary key,\
+	DateChargement date foreign key,\
+	
+\f2\b \ul HeureChargement,
+\f0\b0 \ulnone \
+	IdentifiantSecteur integer foreign key,\
+	IdentifiantArrondissement integer foreign key,\
+	IdentifiantDepot integer foreign key,\
+	
+\f2\b \ul DateDechargement timestamp
+\f0\b0 \ulnone ,\
+	Volume float,\
+	TypeTransaction varchar (7),\
+	IdentifiantContract integer foreign key\
+)}
