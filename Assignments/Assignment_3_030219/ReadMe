@@ -1,4 +1,4 @@
-v# Write a SQL query to get the third highest salary of an employee from employee_table
+# Write a SQL query to get the third highest salary of an employee from employee_table
 # [1] Ref.: https://www.geeksforgeeks.org/sql-query-to-find-second-largest-salary/
 
 SELECT * FROM salaries
