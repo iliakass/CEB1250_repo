@@ -2,15 +2,15 @@
   # Browser: http://localhost:7474/
 
 # Return all nodes with player as labels
-
+  $ match (player) return player
 
 # Return the amount of existing players with position Defence
+  $ match (player {postion: "Defence"}) return count(*)
 
-
-# Return the maximum acquired value among the players 
-
+# Return the maximum acquired value among the players (last year of acquision)
+ $ match (player) return max(player.acquired)
 
 # Add the label player on the node Weber
-
+  $ match (weber) set weber :player return weber
 
 # Remove the position of the nodes which position is Defence
