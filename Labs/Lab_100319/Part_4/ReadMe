@@ -1,0 +1,22 @@
+# Go to localhost:7474 to access your neo4j instance
+
+
+# Create a node called weber with label captain with properties: name Shea Michael Weber, acquired 2016, position Defence
+
+
+# Create a node called domi with label player and properties: name Max Domi, acquired 2018 position centre
+
+
+# Create a node called price with label player and properties: name Carey Price, acquired 2005, position goaltender
+
+
+# Create a node called petry with label player and properties: name Jeff Petry, acquired 2015, position Defence
+
+
+# Create a node called benn, with label player and properties: name Jordie Benn, acquired 2017, position Defence
+
+
+# Create a node called habs with label team and properties: name Montreal Canadiens, sport ice hockey and league NHL
+
+
+# Create a relationship between all nodes with label player and captain and node habs called rosters with property season 2019
