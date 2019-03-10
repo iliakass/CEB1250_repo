@@ -24,5 +24,3 @@
   $ create (weber)-[r:roster {season: 2019}]->(habs)
   $ create (domi)-[r1:roster {season: 2019}]->(habs), (price)-[r2:roster {season: 2019}]->(habs)
   $ create (petry)-[r3:roster {season: 2019}]->(habs), (benn)-[r4:roster {season: 2019}]->(habs)
-  
-  $ create (habs)-[r5:roster {season: 2019}]->(habs)
