@@ -1,22 +1,28 @@
 # Go to localhost:7474 to access your neo4j instance
-# Browser: http://localhost:7474/
+  # Browser: http://localhost:7474/
 
 # Create a node called weber with label captain with properties: name Shea Michael Weber, acquired 2016, position Defence
-# Browser neo4j: $ create (weber:captain {name:"Shea Michael Weber",acquired:2016, postion:"Defence"})
+# Browser neo4j: 
+  $ create (weber:captain {name:"Shea Michael Weber",acquired:2016, position:"Defence"})
 
 # Create a node called domi with label player and properties: name Max Domi, acquired 2018 position centre
-
+  $ create (domi:player {name:"Max Domi",acquired:2018, position:"center"})
 
 # Create a node called price with label player and properties: name Carey Price, acquired 2005, position goaltender
-
+  $ create (price:player {name:"Carey Price",acquired:2005, position:"goaltender"})
 
 # Create a node called petry with label player and properties: name Jeff Petry, acquired 2015, position Defence
-
+  $ create (petry:player {name:"Jeff Petry",acquired:2015, position:"Defence"})
 
 # Create a node called benn, with label player and properties: name Jordie Benn, acquired 2017, position Defence
-
+  $ create (benn:player {name:"Jordie Benn",acquired:2017, position:"Defence"})
 
 # Create a node called habs with label team and properties: name Montreal Canadiens, sport ice hockey and league NHL
-
+  $ create (habs:team {name:"Montreal Canadians",sport:"ice hockey", league:"NHL"})
 
 # Create a relationship between all nodes with label player and captain and node habs called rosters with property season 2019
+  $ create (weber)-[r:roster {season: 2019}]->(habs)
+  $ create (domi)-[r1:roster {season: 2019}]->(habs), (price)-[r2:roster {season: 2019}]->(habs)
+  $ create (petry)-[r3:roster {season: 2019}]->(habs), (benn)-[r4:roster {season: 2019}]->(habs)
+  
+  $ create (habs)-[r5:roster {season: 2019}]->(habs)
