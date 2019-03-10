@@ -1,0 +1,16 @@
+# Go to localhost:7474 to access your neo4j instance 
+
+
+# Return all nodes with player as labels
+
+
+# Return the amount of existing players with position Defence
+
+
+# Return the maximum acquired value among the players 
+
+
+# Add the label player on the node Weber
+
+
+# Remove the position of the nodes which position is Defence
