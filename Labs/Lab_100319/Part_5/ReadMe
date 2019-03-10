@@ -14,3 +14,4 @@
   $ match (weber) set weber :player return weber
 
 # Remove the position of the nodes which position is Defence
+  $ match (a{position:"Defence"}) remove a.postion return a
