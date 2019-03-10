@@ -1,0 +1,13 @@
+# Terminal : git clone https://github.com/danspaes/db-sandbox
+
+# Enter cloned directory
+# Terminal : cd db-sandbox
+
+# Start environment
+# Terminal : docker-compose up -d
+
+# Validate if your mongo-express instance is up and running
+# Browser : localhost:8081
+
+# Validate if cassandra instance is up and running
+# Terminal : docker logs cassandra
