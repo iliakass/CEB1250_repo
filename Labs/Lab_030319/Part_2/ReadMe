@@ -1,0 +1,11 @@
+# Terminal : docker exec -it mongo /bin/bash
+# Terminal : mongoimport -host=127.0.0.1 -jsonArray -u root -p 'example' --authenticationDatabase admin -d movies -c american_movies/data/db/movies.json
+
+# Authenticate user
+# Terminal : mongo -u root -p 'example' --authenticationDatabase admin
+
+# Create database called 'reviews'
+
+# Create a collection names 'user' with the fields 'name' and 'email_address'. Both are type string.
+
+# Create another collection 
