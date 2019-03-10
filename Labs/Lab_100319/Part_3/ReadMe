@@ -1,0 +1,28 @@
+# Create a key list with 4 string names key1, key2, key3 and key4 having as values “Hello “, 10, “this is a test” and 98.9
+
+
+# Listallitemsofthecreatedlist
+
+
+# Create a key of type hash named ‘ceb1250’ with strings names “description”, “day” and “hour” with values “Big Data Storage”, “Sunday” and “9:00-12:00”
+
+
+# Listallvaluesofthecreatedhash
+
+
+# Create a key of type set named set_1 with values member1, dictionary, member3, 4, 10 and 550
+
+
+# Create another key of type set named set_2 with values 4, 10, 550, example and nothing
+
+
+# Create a set named int_set with existing values on both set_1 and set2
+
+
+# Showthemembersofthesetsset_1,set_2andins_set
+
+
+# Type exit to exit of your redis command line
+
+
+# Type exit to exit of your redis container
