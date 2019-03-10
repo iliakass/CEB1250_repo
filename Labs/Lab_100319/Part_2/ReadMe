@@ -1,3 +1,21 @@
 # Create three keys names key1,key2, key3, and key4 with the respective values "This is a test key", 6, 9.0, and "hello"
 # Terminal : mset key1 "This is a test" key2 6 key3 9.0 key4 "hello"
 # Expected out is "OK"
+
+# Increase the value of key2 by 10
+# Terminal : Incrby key2 10
+
+# Change the value of key1 starting from the 14th position to "to appending text"
+# Terminal : setrange key1 14 "to appending text"
+
+# Substract .50 from the key3 value
+# Terminal: Incrbyfloat key3 -0.50
+
+# Append "Word" into key4
+# Terminal : Append key4 "Word"
+
+# Return the value of keys 1 to 4
+
+# Delete the key4
+
+# Verify if key4 exists
