@@ -1,5 +1,5 @@
 # Go to localhost:7474 to access your neo4j instance 
-
+  # Browser: http://localhost:7474/
 
 # Return all nodes with player as labels
 
