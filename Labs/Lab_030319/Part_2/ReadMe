@@ -1,11 +1,23 @@
-# Terminal : docker exec -it mongo /bin/bash
-# Terminal : mongoimport -host=127.0.0.1 -jsonArray -u root -p 'example' --authenticationDatabase admin -d movies -c american_movies/data/db/movies.json
+# Log into your mongo image
+  # Terminal : docker exec -it mongo /bin/bash
+
+  # Terminal : 
+    root@mongo:/# mongoimport -host=127.0.0.1 -jsonArray -u root -p 'example' --authenticationDatabase admin -d movies -c american_movies/data/db/movies.json
 
 # Authenticate user
-# Terminal : mongo -u root -p 'example' --authenticationDatabase admin
+  # Terminal : 
+    root@mongo:/# mongo -u root -p 'example' --authenticationDatabase admin
 
 # Create database called 'reviews'
-
+    use reviews
+  
 # Create a collection names 'user' with the fields 'name' and 'email_address'. Both are type string.
-
-# Create another collection 
+    db.user.insertOne({
+  ... name:"name",
+  ... email_address:"e-mail@address.com"
+  ... })
+  
+# Create another collection named “article” with the keys “name”, “webpage”, “text” and “Author” of type String, and “publish_date” of type Date.
+    use reviews
+    
+    db.article.insertOne({ name:"name", webpage:"https://www.webpage.com",text:"text",Author:"First Name, Last Name",publish_date:new Date() })
