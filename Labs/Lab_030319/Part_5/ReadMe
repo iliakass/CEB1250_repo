@@ -1,0 +1,16 @@
+# Go to terminal
+
+# Connect into your cassandra instance with “docker exec -it cassandra /bin/bash”
+
+
+# Start the instance cassandra bash with “cqlsh” 
+
+
+#Insert 10 rows on the table created on slide 28. 
+
+
+# Query the first ranked cyclist on 2014
+
+
+# Update the name of the first ranked cyclist in 2015 to “Frank”
+
