@@ -11,13 +11,16 @@
 # Create database called 'reviews'
     use reviews
   
+  
 # Create a collection names 'user' with the fields 'name' and 'email_address'. Both are type string.
     db.user.insertOne({
   ... name:"name",
   ... email_address:"e-mail@address.com"
   ... })
   
+  
 # Create another collection named “article” with the keys “name”, “webpage”, “text” and “Author” of type String, and “publish_date” of type Date.
+
     use reviews
     
-    db.article.insertOne({ name:"name", webpage:"https://www.webpage.com",text:"text",Author:"First Name, Last Name",publish_date:new Date() })
+    db.article.insertOne({ name:"name", webpage:"https://www.webpage.com", text:"text", Author:"First Name, Last Name", publish_date:new Date() })
