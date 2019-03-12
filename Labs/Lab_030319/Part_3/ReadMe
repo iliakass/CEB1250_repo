@@ -31,6 +31,8 @@
 
 # Update the drama movies to “Unknown”
 
+	db.american_movies.updateMany({ genres:{$in: ["drama", "Drama"] } }, {$set:{genres:"Unknown"} } )
+
 
 # Find all movies that starts with “Sec” on its name 
 
@@ -39,7 +41,7 @@
 
 	use movies
 
-	db.american_movies.find({ year: "2017" })
+	db.american_movies.find({ year: 2017 })
 	
 
 # Delete all films of year 2017
