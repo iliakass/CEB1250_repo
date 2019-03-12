@@ -23,6 +23,10 @@
 
 
 # Find all drama movies from american_movies at movies database
+	
+	use movies
+
+	db.american_movies.find({ genres:{$in: ["drama", "Drama"] } })
 
 
 # Update the drama movies to “Unknown”
@@ -33,5 +37,9 @@
 
 # Get all movies from 2017
 
+	use movies
+
+	db.american_movies.find({ year: "2017" })
+	
 
 # Delete all films of year 2017
