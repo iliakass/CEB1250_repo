@@ -1,5 +1,38 @@
 # Insert 10 rows at “User” and “”Article” collections
 
+db.user.insertMany([{name:"name",email_address:"e-mail@address.com"},{name:"name",email_address:"e-mail@address.com"},{name:"",email_address:""}])
+{
+	"acknowledged" : true,
+	"insertedIds" : [
+		ObjectId("5c870c6a28ad04d71d686a6d"),
+		ObjectId("5c870c6a28ad04d71d686a6e"),
+		ObjectId("5c870c6a28ad04d71d686a6f")
+	]
+}
+> db.user.insertMany([{name:"name",email_address:"e-mail@address.com"},{name:"name",email_address:"e-mail@address.com"},{name:"",email_address:""}])
+{
+	"acknowledged" : true,
+	"insertedIds" : [
+		ObjectId("5c870c6f28ad04d71d686a70"),
+		ObjectId("5c870c6f28ad04d71d686a71"),
+		ObjectId("5c870c6f28ad04d71d686a72")
+	]
+}
+> db.user.insertMany([{name:"name",email_address:"e-mail@address.com"},{name:"name",email_address:"e-mail@address.com"},{name:"",email_address:""}])
+{
+	"acknowledged" : true,
+	"insertedIds" : [
+		ObjectId("5c870c7428ad04d71d686a73"),
+		ObjectId("5c870c7428ad04d71d686a74"),
+		ObjectId("5c870c7428ad04d71d686a75")
+	]
+}
+> db.user.insertOne({name:"",email_address:""})
+{
+	"acknowledged" : true,
+	"insertedId" : ObjectId("5c870cad28ad04d71d686a76")
+}
+
 
 # Find all drama movies from american_movies at movies database
 
