@@ -28,9 +28,6 @@
 
 # Create a table at a keyspace 'cycling' named rank_by_year_and_name. This table will have race_year and rank as int type and race_name and cyclist_name as text
   
-    CREATE KEYSPACE cycling
-    WITH replication = {'class':'SimpleStrategy', 'replication_factor' : 3};
-  
     CREATE TABLE cycling.rank_by_year_and_name (
       pk_id int PRIMARY KEY,
       race_year int,
