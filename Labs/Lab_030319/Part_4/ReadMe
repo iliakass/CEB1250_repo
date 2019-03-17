@@ -1,22 +1,29 @@
-# Columnar components: Cassandra in docker compose
+# Internal notes
 
   # How to list and clean containers
   [1] Ref.: https://stackoverflow.com/questions/16840409/how-to-list-containers-in-docker
 
+  # How to stop and clean all container
+  [2] Ref.: https://coderwall.com/p/ewk0mq/stop-remove-all-docker-containers
+    docker stop $(docker ps -a -q)
+    docker rm $(docker ps -a -q)
+
+
+# Columnar components: Cassandra in docker compose
 
 # Go to terminal, connect into your cassandra instance with 
 # Terminal: “docker exec -it cassandra /bin/bash”
 
-  docker exec -it cassandra/bin/cqlsh
+  docker exec -it cassandra/bin/bash/
   docker logs cassandra
   
-  docker run -it cassandra cqlsh cassandra/bin/cqlsh
+  cqlsh
 
 
 # Create a keyspace named cycling with a replication factor of 3 and a class of “SimpleStrategy”
 
   CREATE KEYSPACE cycling
-  WITH replication = {'class':'SimpleStrategy', 'replication' = 3};
+  WITH replication = {'class':'SimpleStrategy', 'replication_factor' : 3};
 
 
 # Create a table at a keyspace cycling named rank_by_year_and_name. This table will have race_year and rank as int type and race_name and cyclist_name as text
