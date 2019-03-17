@@ -32,5 +32,7 @@
       pk_id int PRIMARY KEY,
       race_year int,
       rank int,
+      race_name text,
+      cyclist_name text
     );
   
