@@ -2,17 +2,57 @@
 # Start the instance cassandra bash with “cqlsh” 
 
 # Insert 10 rows on the table created on slide 28. 
+
+    INSERT INTO cycling.rank_by_year_and_name (pk_id, race_year, rank, race_name, cyclist_name) 
+        VALUES (1, 2013, 1, 'race', 'racer');
+
+    INSERT INTO cycling.rank_by_year_and_name (pk_id, race_year, rank, race_name, cyclist_name) 
+        VALUES (2, 2014, 2, 'race', 'racer');
+        
+    INSERT INTO cycling.rank_by_year_and_name (pk_id, race_year, rank, race_name, cyclist_name) 
+        VALUES (3, 2015, 3, 'race', 'racer');
+        
+    INSERT INTO cycling.rank_by_year_and_name (pk_id, race_year, rank, race_name, cyclist_name) 
+        VALUES (4, 2015, 1, 'race', 'racer');
+
+    INSERT INTO cycling.rank_by_year_and_name (pk_id, race_year, rank, race_name, cyclist_name) 
+        VALUES (5, 2014, 2, 'race', 'racer');
+        
+    INSERT INTO cycling.rank_by_year_and_name (pk_id, race_year, rank, race_name, cyclist_name) 
+        VALUES (6, 2013, 3, 'race', 'racer');    
+
+    INSERT INTO cycling.rank_by_year_and_name (pk_id, race_year, rank, race_name, cyclist_name) 
+        VALUES (7, 2015, 1, 'race', 'racer');
+
+    INSERT INTO cycling.rank_by_year_and_name (pk_id, race_year, rank, race_name, cyclist_name) 
+        VALUES (8, 2014, 2, 'race', 'racer');
+        
+    INSERT INTO cycling.rank_by_year_and_name (pk_id, race_year, rank, race_name, cyclist_name) 
+        VALUES (9, 2013, 3, 'race', 'racer');    
     
-    CREATE TABLE cycling.rank_by_year_and_name (
-      pk_id int PRIMARY KEY,
-      race_year int,
-      rank int,
-    );
-
-INSERT INTO cycling.rank_by_year_and_name (pk_id, race_year, rank) VALUES (1, 2013,);
-
+    INSERT INTO cycling.rank_by_year_and_name (pk_id, race_year, rank, race_name, cyclist_name) 
+        VALUES (10, 2016, 1, 'race', 'racer');   
+        
 
 # Query the first ranked cyclist on 2014
 
+    SELECT cyclist_name 
+    FROM cycling.rank_by_year_and_name 
+    WHERE race_year = 2014 AND rank = 1 
+    allow filtering;
+
 
 # Update the name of the first ranked cyclist in 2015 to “Frank”
+
+    UPDATE cycling.rank_by_year_and_name
+    SET cyclist_name = 'Frank'
+    WHERE race_year = 2015 AND rank = 1;
+    
+    
+    #Review results
+    
+        SELECT cyclist_name 
+        FROM cycling.rank_by_year_and_name 
+        WHERE race_year = 2015 AND rank = 1 
+        allow filtering;
+    
