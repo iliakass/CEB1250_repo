@@ -1,14 +1,5 @@
-# Go to terminal, connect into your cassandra instance with 
-# Terminal: “docker exec -it cassandra /bin/bash”
-
-  docker exec -it cassandra/bin/cqlsh
-  docker logs cassandra
-  
-  docker run -it cassandra cqlsh cassandra/bin/cqlsh
-
-
+# Go to terminal, connect into your cassandra instance 
 # Start the instance cassandra bash with “cqlsh” 
-
 
 # Insert 10 rows on the table created on slide 28. 
 
