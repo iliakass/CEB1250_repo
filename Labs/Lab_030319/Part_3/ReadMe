@@ -42,14 +42,20 @@
 
 	use movies
 	
-	db.american_movies.find({ genres:/^Sec/ })
+	db.american_movies.find({ title:/^Sec/ })
 	
 
 # Get all movies from 2017
 
 	use movies
-
-	db.american_movies.find({ year: 2017 })
+	
+	db.american_movies.find({ year:2017 })
 	
 
 # Delete all films of year 2017
+
+	db.american_movies.deleteMany({ year:2017 })
+	# Results: { "acknowledged" : true, "deletedCount" : 238 }
+	
+	# Review results
+		db.american_movies.find({ year:2017 })
