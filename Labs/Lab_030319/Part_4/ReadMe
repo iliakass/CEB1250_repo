@@ -14,7 +14,7 @@
 # Go to terminal, connect into your cassandra instance with 
 # Terminal: “docker exec -it cassandra /bin/bash”
 
-    docker exec -it cassandra/bin/bash/
+    docker exec -it cassandra /bin/bash/
     docker logs cassandra
   
     cqlsh
