@@ -9,6 +9,8 @@
       rank int,
     );
 
+INSERT INTO cycling.rank_by_year_and_name (pk_id, race_year, rank) VALUES (1, 2013,);
+
 
 # Query the first ranked cyclist on 2014
 
