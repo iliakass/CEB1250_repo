@@ -31,8 +31,9 @@
     CREATE KEYSPACE cycling
     WITH replication = {'class':'SimpleStrategy', 'replication_factor' : 3};
   
-    CREATE TABLE rank_by_year_and_name (
+    CREATE TABLE cycling.rank_by_year_and_name (
+      pk_id int PRIMARY KEY,
       race_year int,
-      rank int
+      rank int,
     );
   
