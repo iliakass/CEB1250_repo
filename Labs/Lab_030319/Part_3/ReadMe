@@ -33,9 +33,17 @@
 
 	db.american_movies.updateMany({ genres:{$in: ["drama", "Drama"] } }, {$set:{genres:"Unknown"} } )
 
+	# Review results
+		db.american_movies.find({ genres:{$in: ["drama", "Drama"] } })
+
 
 # Find all movies that starts with “Sec” on its name 
+[1] Ref.: https://docs.mongodb.com/manual/tutorial/query-documents/
 
+	use movies
+	
+	db.american_movies.find({ genres:/^Sec/ })
+	
 
 # Get all movies from 2017
 
