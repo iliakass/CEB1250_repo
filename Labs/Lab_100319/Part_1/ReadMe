@@ -1,16 +1,16 @@
-# Terminal: git clone https://github.com/danspaes/db-sandbox
+  # Terminal: git clone https://github.com/danspaes/db-sandbox
 
 # Enter into the cloned directory
-# Terminal : cd db-sandbox
+  # Terminal : cd db-sandbox
 
 # Start your environment
-# Terminal : docker-compose up -d
+  # Terminal : docker-compose up -d
 
 # Log into your mongo image with the command
-# Terminal : docker exec -it redis /bin/bash
+  # Terminal : docker exec -it redis /bin/bash
 
 # Log into redis instance
-# Terminal :  redis-cli
+  # Terminal :  redis-cli
 
 # Ping input the terminal, PONG should be output
-# Terminal: ping
+  # Terminal: ping
