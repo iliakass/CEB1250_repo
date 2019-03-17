@@ -1,6 +1,9 @@
-# Columnar components
+# Columnar components: Cassandra in docker compose
 
 # Create a keyspace named cycling with a replication factor of 3 and a class of “SimpleStrategy”
+
+  CREATE KEYSPACE cycling
+  WITH replication = {'class':'SimpleStrategy', 'replication' = 3};
 
 
 # Create a table at a keyspace cycling named rank_by_year_and_name. This table will have race_year and rank as int type and race_name and cyclist_name as text
