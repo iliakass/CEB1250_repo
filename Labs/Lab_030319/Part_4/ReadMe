@@ -4,6 +4,9 @@
 # Terminal: “docker exec -it cassandra /bin/bash”
 
   docker exec -it cassandra/bin/cqlsh
+  docker logs cassandra
+  
+  docker run -it cassandra cqlsh cassandra/bin/cqlsh
 
 
 # Create a keyspace named cycling with a replication factor of 3 and a class of “SimpleStrategy”
