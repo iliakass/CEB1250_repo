@@ -14,23 +14,25 @@
 # Go to terminal, connect into your cassandra instance with 
 # Terminal: “docker exec -it cassandra /bin/bash”
 
-  docker exec -it cassandra/bin/bash/
-  docker logs cassandra
+    docker exec -it cassandra/bin/bash/
+    docker logs cassandra
   
-  cqlsh
+    cqlsh
 
 
 # Create a keyspace named cycling with a replication factor of 3 and a class of “SimpleStrategy”
 
-  CREATE KEYSPACE cycling
-  WITH replication = {'class':'SimpleStrategy', 'replication_factor' : 3};
+    CREATE KEYSPACE cycling
+    WITH replication = {'class':'SimpleStrategy', 'replication_factor' : 3};
 
 
-# Create a table at a keyspace cycling named rank_by_year_and_name. This table will have race_year and rank as int type and race_name and cyclist_name as text
-
-  CREATE TABLE {
+# Create a table at a keyspace 'cycling' named rank_by_year_and_name. This table will have race_year and rank as int type and race_name and cyclist_name as text
   
-    race_year int,
-    rank int
-  };
+    CREATE KEYSPACE cycling
+    WITH replication = {'class':'SimpleStrategy', 'replication_factor' : 3};
+  
+    CREATE TABLE rank_by_year_and_name (
+      race_year int,
+      rank int
+    );
   
